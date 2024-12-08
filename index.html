@@ -16,6 +16,7 @@
             flex-direction: column;
             position: relative;
             overflow-x: hidden;
+            overflow-y: hidden; /* Prevent vertical overflow */
         }
 
         .background {
@@ -93,17 +94,18 @@
         }
 
         .screenshot-bar {
-            position: absolute;
+            position: fixed; /* Ensures it stays at the bottom */
             bottom: 0;
             left: 0;
-            width: 100%;
+            width: 100%; /* Ensures full width */
             height: 100px;
             background-color: rgba(0, 0, 0, 0.5);
             display: flex;
             align-items: center;
+            justify-content: center;
             overflow-x: auto;
-            padding: 10px 0;
             gap: 20px;
+            z-index: 1;
         }
 
         .screenshot-bar .screenshot {
@@ -148,7 +150,8 @@
         <div class="screenshot"></div>
     </div>
     <div class="logo">decompile</div>
-    <button class="access-button" href="/access/">Request Access</button>
+    <!-- Fixed the button by making it an anchor tag instead of using href on button -->
+    <a href="/access/" class="access-button">Request Access</a>
     <div class="screenshot-bar">
         <div class="screenshot"></div>
         <div class="screenshot"></div>
