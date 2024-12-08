@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Access - decompile</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.85);
+            border: 1px solid #555;
+            border-radius: 10px;
+            padding: 20px 30px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .container h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .container p {
+            font-size: 1rem;
+            color: #bbb;
+            margin-bottom: 20px;
+        }
+
+        .container input, .container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: black;
+            color: white;
+        }
+
+        .container input:focus, .container textarea:focus {
+            outline: none;
+            border-color: white;
+        }
+
+        .container button {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container button:hover {
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .footer a {
+            color: #0078d7;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Request Access</h1>
+        <p>Fill out the form below to request access to the directory. Please provide a valid reason.</p>
+        <form action="https://formsubmit.co/decompile@null.net" method="POST">
+            <!-- Hidden inputs for FormSubmit configuration -->
+            <input type="hidden" name="_subject" value="Access Request">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="_autoresponse" value="Thank you for requesting access. We'll review your request soon.">
+            
+            <!-- Visible form fields -->
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
+            <textarea name="Reason" rows="5" placeholder="Reason for requesting access..." required></textarea>
+            <button type="submit">Submit Request</button>
+        </form>
+        <div class="footer">
+            <p>Having issues? Contact us at <a href="mailto:decompile@null.net">decompile@null.net</a>.</p>
+        </div>
+    </div>
+</body>
+</html>

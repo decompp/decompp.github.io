@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>decompile. - by fiftyfive</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            z-index: -1;
+        }
+
+        .background .screenshot {
+            width: 400px;
+            height: 300px;
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s ease;
+        }
+
+        .background .screenshot:hover {
+            transform: scale(1.05);
+        }
+
+        .background .screenshot:nth-child(1) {
+            background-image: url('/api/placeholder/400/300');
+        }
+
+        .background .screenshot:nth-child(2) {
+            background-image: url('/api/placeholder/400/300');
+        }
+
+        .background .screenshot:nth-child(3) {
+            background-image: url('/api/placeholder/400/300');
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 30px;
+            overflow: hidden;
+            border-right: .15em solid white;
+            white-space: nowrap;
+            animation: blink-caret .75s step-end infinite;
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: white; }
+        }
+
+        .access-button {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .access-button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .screenshot-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            overflow-x: auto;
+            padding: 10px 0;
+            gap: 20px;
+        }
+
+        .screenshot-bar .screenshot {
+            width: 150px;
+            height: 100px;
+            border-radius: 5px;
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .screenshot-bar .screenshot:hover {
+            transform: scale(1.1);
+        }
+
+        .screenshot-bar .screenshot:nth-child(1) {
+            background-image: url('pvz.png');
+        }
+
+        .screenshot-bar .screenshot:nth-child(2) {
+            background-image: url('granny.png');
+        }
+
+        .screenshot-bar .screenshot:nth-child(3) {
+            background-image: url('mcsm.png');
+        }
+
+        .screenshot-bar .screenshot:nth-child(4) {
+            background-image: url('baldi.png');
+        }
+
+        .screenshot-bar .screenshot:nth-child(5) {
+            background-image: url('fnf.png');
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="screenshot"></div>
+        <div class="screenshot"></div>
+        <div class="screenshot"></div>
+    </div>
+    <div class="logo">decompile</div>
+    <button class="access-button" href="/access/">Request Access</button>
+    <div class="screenshot-bar">
+        <div class="screenshot"></div>
+        <div class="screenshot"></div>
+        <div class="screenshot"></div>
+        <div class="screenshot"></div>
+        <div class="screenshot"></div>
+    </div>
+</body>
+</html>
